@@ -1,0 +1,152 @@
+.sidebar {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 232px;
+    height: 100%;
+    left: 0;
+    background-color: var(--main-color);
+    padding: 64px 0;
+    box-shadow: 0 4px 4px 0 var(--box-shadow);
+    z-index: 1;
+}
+.sidebar-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 119px;
+    gap: 15px;
+}
+.menu-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 46px;
+    padding: 8px 56px;
+    gap: 8px;
+}
+.menu-item:hover {
+    background-color: var(--side-bar-hover);
+}
+.sidebar-text {
+    color: var(--side-bar-text);
+}
+.active {
+    background-color: var(--side-bar-active);
+    color: var(--white);
+}
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 317px;
+    padding-top: 243px;
+    padding-left: 52px;
+}
+.footer-links a {
+    color: var(--footer-text);
+}
+.footer-links a:hover {
+    width: fit-content;
+    font-weight: 700;
+    color: var(--highlight);
+}
+.header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    background-color: var(--white);
+    padding: 20px 40px 20px 348px;
+    box-shadow: 0 4px 4px 0 var(--box-shadow);
+}
+.user-info-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 104px;
+    height: 56px;
+    gap: 16px;
+}
+.help {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--main-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.user-avatar:hover {
+    background-color: var(--avatar-hover);
+}
+.user-name-shortcut {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    border-radius: 559px;
+    padding: 10px;
+}
+.user-name-shortcut span {
+    font-weight: 700;
+    color: var(--highlight);
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 100%;
+        height: 80px;
+        bottom: 0;
+        padding: 0 16px;
+    }
+    .sidebar-logo, .footer-links {
+        display: none;
+    }
+    .sidebar-menu {
+        height: 100%;
+        width: 100%;
+        flex-direction: unset;
+        margin: unset;
+    }
+    .active, .menu-item {
+        justify-content: center;
+        flex-direction: column;
+        width: 80px;
+        height: 76px;
+        border-radius: 16px;
+    }
+    .small-logo {
+        display: block !important;
+    }
+    .header-text, .display-settings, .help, .greeting, .split {
+        display: none;
+    }
+    .header {
+        padding: 20px 16px;
+    }
+    span {
+        font-size: 14px;
+    }
+    .menu-item img {
+        width: 24px;
+        height: 24px;
+    }
+    .user-avatar {
+        width: 40px;
+        height: 40px;
+    }
+    .user-info-wrapper {
+        width: unset;
+    }
+}

@@ -1,0 +1,156 @@
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--white);
+    box-shadow: 0 0 14px 3px var(--box-shadow);
+    border-radius: 30px;
+    gap: 32px;
+}
+.login-headline, .signup-headline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+.signup-headline img {
+    position: absolute;
+    left: 50px;
+    cursor: pointer;
+}
+.login {
+    padding: 48px 115px;
+}
+.signup {
+    position: relative;
+    padding: 48px 88px;
+}
+.underline {
+    width: 150px;
+    height: 3px;
+    background-color: var(--highlight);
+}
+.login-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.input-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-field img {
+    position: relative;
+    right: 42px;
+}
+.remember-me, .accept-me {
+    position: relative;
+    display: flex;
+    align-items: center;
+    left: 39px;
+    gap: 8px;
+}
+.remember-me img, .accept-me img {
+    cursor: pointer;
+}
+.remember-me img:hover, .accept-me img:hover {
+    background-color: var(--checkbox-hover);
+    border-radius: 43px;
+}
+.accept-me b {
+    color: var(--highlight);
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.accept-me b:hover {
+    font-weight: 500;
+    text-decoration: underline;
+}
+.login-options {
+    display: flex;
+    gap: 35px;
+}
+.signup-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 67px;
+    right: 77px;
+    gap: 35px;
+}
+.signin-btn {
+    font-size: 16px;
+    padding: 15px 16px;
+}
+.legal-links {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 67px;
+    gap: 32px;
+}
+.legal-links a {
+    color: var(--footer-text);
+}
+.legal-links a:hover {
+    width: fit-content;
+    font-weight: 700;
+    color: var(--highlight);
+}
+.logo-signup {
+    position: absolute;
+    top: 80px;
+    left: 77px;
+}
+.login-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: logo-animation;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-duration: 500ms;
+    animation-delay: 500ms;
+}
+.screen-animation {
+    opacity: 0;
+    animation-name: screen-animation;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-duration: 500ms;
+    animation-delay: 700ms;
+    animation-iteration-count: 1;
+}
+@keyframes logo-animation {
+    0% {
+        width: 274px;
+        height: 334px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        width: 100px;
+        height: 122px;
+        top: 80px;
+        left: 77px;
+        transform: none;
+    }
+}
+@keyframes screen-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
